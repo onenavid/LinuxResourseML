@@ -122,10 +122,10 @@ project/
   - **Sidebar**: Metrics, ML status, Export button
   - **Main panel**: Plots, top processes, alert log
 - Updates:
-  - `self._on_metrics_update()` → Called by monitoring thread
-  - `self._update_gui()` → Updates labels, charts, and processes
-- CSV Export: `_export_data()`
-- Graceful shutdown: `_on_close()`
+  -  → Called by monitoring thread
+  -  → Updates labels, charts, and processes
+- CSV Export:
+- Graceful shutdown
 
 ---
 
