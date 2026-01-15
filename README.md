@@ -129,25 +129,6 @@ project/
 
 ---
 
-## Flow of Program
-
-```mermaid
-flowchart TD
-    A[Start Application] --> B[Initialize GUI (CustomTkinter)]
-    B --> C[Start MonitorThread]
-    C --> D[Collect System Metrics (CPU, Memory, Disk, Network)]
-    D --> E[Send metrics to GUI via callback]
-    E --> F[Update GUI Labels & Charts]
-    F --> G[Add metrics to AnomalyDetector]
-    G --> H[Train/Predict Anomalies (Isolation Forest)]
-    H --> I[Update Status & Log Alerts]
-    F --> J[Update Top Processes Table]
-    J --> F
-    E --> K[Store metrics in history for plotting & CSV]
-    K --> L[Optional Export to CSV]
-    A --> M[Close Application -> Stop Thread & Exit]
-```
-
 - **Data flow**:
   1. `MonitorThread` collects metrics.
   2. Calls GUI callback (`_on_metrics_update`).
